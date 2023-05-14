@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Magic Plus</title>
+	<link rel="stylesheet" type="text/css" href="product.css">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="./images/logo.jpeg" />
+</head>
+<body>
+	<header>
+		<h1>Magic Plus</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="product-page.html">Product</a></li>
+                <li><a href="cart.html">cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section class="product-page">
+			<h2>Magic plus TV</h2>
+			<div class="product-images">
+				<img src="./images/front.JPG" alt="My Product">
+				<img src="./images/back.JPG" alt="My Product">
+				<img src="./images/side.JPG" alt="My Product">
+                <img src="./images/top.JPG" alt="My Product">
+			</div>
+			<div class="product-details">
+                <h2>Product Details</h2>
+                <div class="product-price">$999.99</div>
+                <div class="product-description">
+                    <p>Specifications:
+                        • Screen size: 55 inches
+                        • Display resolution: 4K Ultra HD
+                        • Operating system: Customized Android OS with Al capabilities
+                        • Processor: Quad-core 1.8 GHz processor
+                        • RAM: 2 GB
+                        • Storage: 16 GB
+                        • Audio: Dolby Atmos with 4 speakers
+                        • Connectivity: Wi-Fi, Bluetooth, Ethernet, HDMI, USB
+                        • Additional features: Facial recognition, voice control, automatic shut off, motorized tilting mechanism
+                    </p>
+                    <a href="marketing.html">View full marketing strategy</a>
+
+                </div>
+                <div class="product-variants">
+                    <div class="product-variant">
+                        <label for="tv-size">Select TV size:</label>
+                        <select id="tv-size">
+                            <option value="50">50 inch</option>
+                            <option value="55">55 inch</option>
+                        </select>
+                    </div>
+                    <div class="product-variant">
+                        <label for="tv-color">Select TV color:</label>
+                        <select id="tv-color">
+                            <option value="black">Black</option>
+                            <option value="silver">Silver</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="product-quantity">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                </div>
+                <div class="product-add-to-cart">
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 My Product. All rights reserved.</p>
+	</footer>
+	<script src="script.js"></script>
+</body>
+</html>

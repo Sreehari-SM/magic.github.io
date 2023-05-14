@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Magic Plus</title>
+	<link rel="stylesheet" type="text/css" href="cart.css">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="./images/logo.jpeg" />
+</head>
+<body>
+	<header>
+		<h1>Magic Plus</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="product-page.html">Product</a></li>
+                <li><a href="cart.html">cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section class="cart-page">
+			<h2>Shopping Cart</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Product</th>
+						<th>Price</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- Loop through the cart items and display them as table rows -->
+					<script>
+						let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+						for (let i = 0; i < cart.length; i++) {
+							document.write(`<tr>
+								<td>${cart[i].name}</td>
+								<td>$${cart[i].price.toFixed(2)}</td>
+								<td><button onclick="removeItem(${i})">Remove</button></td>
+							</tr>`);
+						}
+					</script>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="2">Total:</td>
+						<td>
+							<script>
+								// Calculate the total price of all items in the cart
+								let total = 0;
+								for (let i = 0; i < cart.length; i++) {
+									total += cart[i].price;
+								}
+								document.write(`$${total.toFixed(2)}`);
+							</script>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+			<button id="checkout-btn">Checkout</button>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 My Product. All rights reserved.</p>
+	</footer>
+	<script src="script.js"></script>
+</body>
+</html>
